@@ -17,7 +17,6 @@ public class TaskService {
 
     @RabbitListener(queues = "task")
     public void handler(JsonNode request){
-        ObjectMapper mapper = new ObjectMapper();
         switch (request.get("method").asText()){
             case "CREATE":
                 create(request.get("body"));
