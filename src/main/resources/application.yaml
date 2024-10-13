@@ -1,7 +1,10 @@
 spring:
   application:
     name: taskservice
-
+  rabbitmq:
+    host: rabbitmq.default.svc.cluster.local
+    username: rabbitmq
+    password: rabbitmq
   jpa:
     properties:
       hibernate:
