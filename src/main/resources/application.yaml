@@ -2,9 +2,9 @@ spring:
   application:
     name: taskservice
   rabbitmq:
-    host: rabbitmq.default.svc.cluster.local
-    username: rabbitmq
-    password: rabbitmq
+    host: ${RABBITMQ_HOST}
+    username: ${RABBITMQ_USERNAME}
+    password: ${RABBITMQ_PASSWORD}
   jpa:
     properties:
       hibernate:
@@ -19,4 +19,4 @@ spring:
     username: ${DATASOURCE_USERNAME}
     password: ${DATASOURCE_PASSWORD}
 server:
-  port: 8082
+  port: ${SERVER_PORT}
