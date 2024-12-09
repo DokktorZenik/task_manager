@@ -20,3 +20,16 @@ spring:
     password: ${DATASOURCE_PASSWORD}
 server:
   port: ${SERVER_PORT}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    metrics:
+      enabled: true
+  prometheus:
+    metrics:
+      export:
+        enabled: true
